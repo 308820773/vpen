@@ -1,0 +1,173 @@
+@charset "UTF-8";
+.v-editor {
+  position: relative; }
+  .v-editor .block {
+    position: relative;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+    width: 100%; }
+    .v-editor .block .text {
+      min-height: 32px; }
+      .v-editor .block .text p {
+        display: block; }
+    .v-editor .block p.text {
+      color: #666 !important;
+      line-height: 31px !important;
+      font-size: 18px;
+      font-size: 1.8rem; }
+    .v-editor .block ol.text *, .v-editor .block ul.text * {
+      color: #666 !important;
+      line-height: 31px !important;
+      font-size: 18px;
+      font-size: 1.8rem; }
+    .v-editor .block .area_nav, .v-editor .block .block_nav {
+      position: absolute;
+      z-index: 99999;
+      width: 28px;
+      height: 27px;
+      top: 5px;
+      left: 0; }
+      .v-editor .block .area_nav ul, .v-editor .block .area_nav ol, .v-editor .block .area_nav li, .v-editor .block .block_nav ul, .v-editor .block .block_nav ol, .v-editor .block .block_nav li {
+        margin: 0;
+        list-style: none; }
+      .v-editor .block .area_nav ul.tags, .v-editor .block .block_nav ul.tags {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+        padding: 10px 0 0 0;
+        border: none;
+        box-shadow: none;
+        background-color: transparent; }
+        .v-editor .block .area_nav ul.tags li, .v-editor .block .block_nav ul.tags li {
+          width: 27px;
+          height: 37px; }
+      .v-editor .block .area_nav .tag, .v-editor .block .block_nav .tag {
+        display: inline-block;
+        padding: 0;
+        text-align: center;
+        font-size: 20px;
+        color: #1e3042;
+        line-height: 27px;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-indent: -1000px;
+        overflow: hidden;
+        background-color: #fff; }
+      .v-editor .block .area_nav .active .tag, .v-editor .block .area_nav .tag:hover, .v-editor .block .area_nav .tag.selected, .v-editor .block .block_nav .active .tag, .v-editor .block .block_nav .tag:hover, .v-editor .block .block_nav .tag.selected {
+        border-color: #666; }
+      .v-editor .block .area_nav .active, .v-editor .block .block_nav .active {
+        display: none; }
+      .v-editor .block .area_nav .tag.H2, .v-editor .block .block_nav .tag.H2 {
+        background-image: url("/img/v_editor/area/h2.png"); }
+      .v-editor .block .area_nav .tag.H3, .v-editor .block .block_nav .tag.H3 {
+        background-image: url("/img/v_editor/area/h3.png"); }
+      .v-editor .block .area_nav .tag.H4, .v-editor .block .block_nav .tag.H4 {
+        background-image: url("/img/v_editor/area/h4.png"); }
+      .v-editor .block .area_nav .tag.H5, .v-editor .block .block_nav .tag.H5 {
+        background-image: url("/img/v_editor/area/h5.png"); }
+      .v-editor .block .area_nav .tag.P, .v-editor .block .block_nav .tag.P {
+        background-image: url("/img/v_editor/area/p.png"); }
+      .v-editor .block .area_nav .tag.UL, .v-editor .block .block_nav .tag.UL {
+        background-image: url("/img/v_editor/area/ul.png"); }
+      .v-editor .block .area_nav .tag.OL, .v-editor .block .block_nav .tag.OL {
+        background-image: url("/img/v_editor/area/ol.png"); }
+      .v-editor .block .area_nav .tag.CP, .v-editor .block .block_nav .tag.CP {
+        background-image: url("/img/v_editor/area/cp.png"); }
+      .v-editor .block .area_nav .tag.RP, .v-editor .block .block_nav .tag.RP {
+        background-image: url("/img/v_editor/area/rp.png"); }
+      .v-editor .block .area_nav .tag.Q, .v-editor .block .block_nav .tag.Q {
+        background-image: url("/img/v_editor/area/q.png"); }
+      .v-editor .block .area_nav .tag.PQ, .v-editor .block .block_nav .tag.PQ {
+        background-image: url("/img/v_editor/area/pq.png"); }
+      .v-editor .block .area_nav .tag.PixImage, .v-editor .block .block_nav .tag.PixImage {
+        background-image: url("/img/v_editor/block/piximage.png"); }
+      .v-editor .block .area_nav .tag.Quote, .v-editor .block .block_nav .tag.Quote {
+        background-image: url("/img/v_editor/block/quote.png"); }
+      .v-editor .block .area_nav .tag.PixImage, .v-editor .block .block_nav .tag.PixImage {
+        background-image: url("/img/v_editor/block/piximage.png"); }
+      .v-editor .block .area_nav .tag.HR, .v-editor .block .block_nav .tag.HR {
+        background-image: url("/img/v_editor/block/br.png"); }
+      .v-editor .block .area_nav .tag.SourceCodeBlock, .v-editor .block .block_nav .tag.SourceCodeBlock {
+        background-image: url("/img/v_editor/block/code.png"); }
+      .v-editor .block .area_nav .tag.VideoFileLink, .v-editor .block .block_nav .tag.VideoFileLink {
+        background-image: url("/img/v_editor/block/video.png"); }
+      .v-editor .block .area_nav .tag.create, .v-editor .block .block_nav .tag.create {
+        background-image: url("/img/v_editor/block/create.png"); }
+    .v-editor .block .image_menu.pen-nav {
+      display: none; }
+    .v-editor .block .block_edit {
+      z-index: 2;
+      position: absolute;
+      display: none;
+      width: 33px;
+      top: 9px;
+      right: 90px;
+      height: 33px;
+      background: url("/img/v_editor/block_edit.png") no-repeat; }
+    .v-editor .block .block_edit:hover {
+      background: url("/img/v_editor/block_edit_hover.png") no-repeat; }
+    .v-editor .block .block_del {
+      z-index: 2;
+      position: absolute;
+      display: none;
+      width: 33px;
+      top: 9px;
+      right: 50px;
+      height: 33px;
+      background: url("/img/v_editor/block_del.png") no-repeat; }
+    .v-editor .block .block_del:hover {
+      background: url("/img/v_editor/block_del_hover.png") no-repeat; }
+  .v-editor .right_float.block .block_nav, .v-editor .right_float.block .area_nav {
+    left: 268px; }
+  .v-editor .block hr,
+  .v-editor .block .quote,
+  .v-editor .block .source_code_block,
+  .v-editor .block.pix_image,
+  .v-editor .block.video,
+  .v-editor .block[data-type='Quote'],
+  .v-editor .block[data-type='SourceCodeBlock'] {
+    clear: both;
+    margin: 40px auto 50px auto; }
+  .v-editor [data-type='TextBlock'] code {
+    background: #f2f2f2;
+    color: #333; }
+  .v-editor .editing .image_menu.pen-nav {
+    display: block;
+    position: relative;
+    top: -42px;
+    width: 136px;
+    margin: 0 auto -36px; }
+    .v-editor .editing .image_menu.pen-nav i {
+      background-position: center center;
+      background-repeat: no-repeat; }
+    .v-editor .editing .image_menu.pen-nav i[data-action='left'] {
+      background-image: url("/img/v_editor/img/left.png"); }
+    .v-editor .editing .image_menu.pen-nav i[data-action='center'] {
+      background-image: url("/img/v_editor/img/center.png"); }
+    .v-editor .editing .image_menu.pen-nav i[data-action='full'] {
+      background-image: url("/img/v_editor/img/full.png"); }
+  .v-editor .editing .block_edit {
+    display: block; }
+  .v-editor .editing .block_del {
+    display: block; }
+
+.placeholder:before {
+  color: #a9a9a9;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.block .placeholder:before {
+  content: '输入文字';
+  /* this is where you assign the place holder */ }
+
+.block.title .placeholder:before {
+  content: '标题';
+  /* this is where you assign the place holder */ }
+
+/*# sourceMappingURL=v_editor.css.map */

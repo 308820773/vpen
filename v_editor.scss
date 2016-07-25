@@ -1,0 +1,284 @@
+// FILE_DESC:
+//   This file set the html tag css, example <body> <a>
+@import "../setting";
+
+.v-editor{
+  position: relative;
+
+  .block{
+    position: relative;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+    width: 100%;
+    //min-height: 63px;
+
+    .text{
+      min-height: 32px;
+
+
+      p{
+        display: block;
+      }
+
+
+    }
+    //liudx edit
+    p.text{
+      color: #666 !important;
+      line-height: 31px !important;
+      @include font-size(18);
+    }
+
+    ol.text, ul.text{
+      *{
+        color: #666 !important;
+        line-height: 31px !important;
+        @include font-size(18);
+
+      }
+    }
+
+    .area_nav, .block_nav{
+      position: absolute;
+      z-index: 99999;
+      width: 28px;
+      height: 27px;
+      top: 5px;
+      left: 0;
+
+      ul, ol, li{
+        margin: 0;
+        list-style: none;
+      }
+
+      ul.tags{
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+        padding: 10px 0 0 0;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+
+        li{
+          width: 27px;
+          height: 37px;
+        }
+      }
+
+      .tag{
+        display: inline-block;
+        //text-indent:-9999px;
+        padding: 0;
+        text-align: center;
+        font-size: 20px;
+        color: #1e3042;
+        line-height: 27px;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-indent: -1000px;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .active .tag, .tag:hover, .tag.selected{
+        //background-color: #f4f3f2;
+        border-color: #666;
+      }
+
+      .active{
+        display: none;
+      }
+
+      .tag.H2{
+        background-image: url("#{$img_dir}v_editor/area/h2.png");
+      }
+      .tag.H3{
+        background-image: url("#{$img_dir}v_editor/area/h3.png");
+      }
+      .tag.H4{
+        background-image: url("#{$img_dir}v_editor/area/h4.png");
+      }
+      .tag.H5{
+        background-image: url("#{$img_dir}v_editor/area/h5.png");
+      }
+      .tag.P{
+        background-image: url("#{$img_dir}v_editor/area/p.png");
+      }
+      .tag.UL{
+        background-image: url("#{$img_dir}v_editor/area/ul.png");
+      }
+      .tag.OL{
+        background-image: url("#{$img_dir}v_editor/area/ol.png");
+      }
+      .tag.CP{
+        background-image: url("#{$img_dir}v_editor/area/cp.png");
+      }
+      .tag.RP{
+        background-image: url("#{$img_dir}v_editor/area/rp.png");
+      }
+      .tag.Q{
+        background-image: url("#{$img_dir}v_editor/area/q.png");
+      }
+      .tag.PQ{
+        background-image: url("#{$img_dir}v_editor/area/pq.png");
+      }
+      .tag.PixImage{
+        background-image: url("#{$img_dir}v_editor/block/piximage.png");
+      }
+      .tag.Quote{
+        background-image: url("#{$img_dir}v_editor/block/quote.png");
+      }
+      .tag.PixImage{
+        background-image: url("#{$img_dir}v_editor/block/piximage.png");
+      }
+      .tag.HR{
+        background-image: url("#{$img_dir}v_editor/block/br.png");
+      }
+      .tag.SourceCodeBlock{
+        background-image: url("#{$img_dir}v_editor/block/code.png");
+      }
+      .tag.VideoFileLink{
+        background-image: url("#{$img_dir}v_editor/block/video.png");
+      }
+      .tag.create{
+        background-image: url("#{$img_dir}v_editor/block/create.png");
+      }
+
+    }
+
+    .image_menu.pen-nav{
+      display: none;
+    }
+
+    .block_edit{
+      z-index: 2;
+      position: absolute;
+      display: none;
+      width: 33px;
+      top: 9px;
+      right: 90px;
+      height: 33px;
+      background: url("#{$img_dir}v_editor/block_edit.png") no-repeat;
+    }
+
+    .block_edit:hover{
+      background: url("#{$img_dir}v_editor/block_edit_hover.png") no-repeat;
+    }
+
+    .block_del{
+      z-index: 2;
+      position: absolute;
+      display: none;
+      width: 33px;
+      top: 9px;
+      right: 50px;
+      height: 33px;
+      background: url("#{$img_dir}v_editor/block_del.png") no-repeat;
+    }
+
+    .block_del:hover{
+      background: url("#{$img_dir}v_editor/block_del_hover.png") no-repeat;
+    }
+  }
+
+  .right_float.block{
+    .block_nav, .area_nav{
+      left: 268px;
+    }
+  }
+
+  //.block[data-type='PullQuote'],
+  .block hr,
+  .block .quote,
+  .block .source_code_block,
+  .block.pix_image,
+  .block.video,
+  .block[data-type='Quote'],
+  .block[data-type='SourceCodeBlock']{
+    clear: both;
+    margin: 40px auto 50px auto;
+  }
+  [data-type='TextBlock']{
+    code{
+      background: #f2f2f2;
+      //border: 1px dashed #a1a1a1;
+      color: #333;
+    }
+  }
+  //.pix_image{
+  //  .block_edit{
+  //    top: 38px;
+  //    right: 13px;
+  //  }
+  //  .block_del{
+  //    top: 38px;
+  //    right: 50px;
+  //  }
+  //}
+  //
+  //.source_code_block, .video, .quote{
+  //  .block_edit{
+  //    top: 9px;
+  //    right: 13px;
+  //  }
+  //  .block_del{
+  //    top: 9px;
+  //    right: 50px;
+  //  }
+  //}
+
+  .editing{
+    .image_menu.pen-nav{
+      display: block;
+      position: relative;
+      top: -42px;
+      width: 136px;
+      margin: 0 auto -36px;
+
+      i{
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      i[data-action='left']{
+        background-image: url("#{$img_dir}v_editor/img/left.png");
+      }
+      i[data-action='center']{
+        background-image: url("#{$img_dir}v_editor/img/center.png");
+      }
+      i[data-action='full']{
+        background-image: url("#{$img_dir}v_editor/img/full.png");
+      }
+    }
+
+    .block_edit{
+      display: block;
+    }
+    .block_del{
+      display: block;
+    }
+  }
+}
+
+
+.placeholder:before {
+  color: #a9a9a9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.block .placeholder:before{
+  content: '输入文字'; /* this is where you assign the place holder */
+}
+
+.block.title{
+  .placeholder:before {
+    content: '标题'; /* this is where you assign the place holder */
+  }
+}
